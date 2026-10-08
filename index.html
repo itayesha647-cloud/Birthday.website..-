@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +18,13 @@
             min-height: 100vh;
             font-family: Georgia, serif;
             background:
-                radial-gradient(circle at top, #c084fc 0%, #8b5cf6 35%, #4c1d95 70%, #1e1038 100%);
+                radial-gradient(
+                    circle at top,
+                    #c084fc 0%,
+                    #8b5cf6 35%,
+                    #4c1d95 70%,
+                    #1e1038 100%
+                );
             color: white;
             overflow: hidden;
         }
@@ -135,8 +143,14 @@
             position: fixed;
             inset: 0;
             z-index: 100;
+
             background:
-                radial-gradient(circle at center, #6d28d9, #2e1065 60%, #12051f);
+                radial-gradient(
+                    circle at center,
+                    #6d28d9,
+                    #2e1065 60%,
+                    #12051f
+                );
 
             display: flex;
             justify-content: center;
@@ -239,6 +253,7 @@
 
         .unlockBtn:hover {
             transform: scale(1.05);
+
             box-shadow:
                 0 0 25px #fff,
                 0 0 45px #c084fc;
@@ -273,7 +288,8 @@
                 inset 0 0 60px rgba(0,0,0,0.5),
                 0 0 30px rgba(0,0,0,0.5);
 
-            transition: transform 2.2s cubic-bezier(.77,0,.18,1);
+            transition:
+                transform 2.2s cubic-bezier(.77,0,.18,1);
         }
 
         .curtain.left {
@@ -306,7 +322,8 @@
                 0 0 8px white,
                 0 0 15px #c084fc;
 
-            animation: sparkle 2s infinite ease-in-out;
+            animation:
+                sparkle 2s infinite ease-in-out;
         }
 
         @keyframes sparkle {
@@ -320,6 +337,45 @@
                 transform: scale(1.5);
             }
         }
+
+        /* ---------- NEXT BUTTON ---------- */
+
+        .nextBtn {
+            margin-top: 25px;
+            padding: 13px 35px;
+
+            border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 30px;
+
+            background: rgba(255,255,255,0.12);
+            color: white;
+
+            font-size: 17px;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 0 12px #c084fc,
+                0 0 25px rgba(192,132,252,0.35);
+
+            backdrop-filter: blur(8px);
+
+            transition: all 0.3s ease;
+        }
+
+        .nextBtn:hover {
+            transform: scale(1.08);
+
+            background: rgba(192,132,252,0.35);
+
+            box-shadow:
+                0 0 20px #ffffff,
+                0 0 40px #c084fc;
+        }
+
+        /* ---------- MOBILE ---------- */
 
         @media (max-width: 600px) {
 
@@ -337,70 +393,6 @@
                 font-size: 21px;
             }
         }
-        .nextBtn {
-    margin-top: 25px;
-    padding: 13px 35px;
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 30px;
-
-    background: rgba(255,255,255,0.12);
-    color: white;
-
-    font-size: 17px;
-    font-weight: bold;
-    letter-spacing: 1px;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 0 12px #c084fc,
-        0 0 25px rgba(192,132,252,0.35);
-
-    backdrop-filter: blur(8px);
-
-    transition: all 0.3s ease;
-}
-
-.nextBtn:hover {
-    transform: scale(1.08);
-    background: rgba(192,132,252,0.35);
-
-    box-shadow:
-        0 0 20px #ffffff,
-        0 0 40px #c084fc;
-        .nextBtn {
-    margin-top: 25px;
-    padding: 13px 35px;
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 30px;
-
-    background: rgba(255,255,255,0.12);
-    color: white;
-
-    font-size: 17px;
-    font-weight: bold;
-    letter-spacing: 1px;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 0 12px #c084fc,
-        0 0 25px rgba(192,132,252,0.35);
-
-    backdrop-filter: blur(8px);
-
-    transition: all 0.3s ease;
-}
-
-.nextBtn:hover {
-    transform: scale(1.08);
-    background: rgba(192,132,252,0.35);
-
-    box-shadow:
-        0 0 20px #ffffff,
-        0 0 40px #c084fc;
-}
-}
     </style>
 </head>
 
@@ -425,7 +417,7 @@
                 id="pinInput"
                 class="pinInput"
                 maxlength="5"
-                placeholder="••••"
+                placeholder="•••••"
             >
 
             <br>
@@ -442,12 +434,10 @@
 
     </div>
 
-
     <!-- CINEMATIC CURTAINS -->
 
     <div class="curtain left"></div>
     <div class="curtain right"></div>
-
 
     <!-- MAIN WEBSITE -->
 
@@ -457,15 +447,13 @@
             A Little Surprise
         </div>
 
-
-        <!-- CHANGE dp.jpg TO YOUR PHOTO NAME -->
+        <!-- YOUR PHOTO -->
 
         <img
             src="dp.jpg"
             alt="DP"
             class="dp"
         >
-
 
         <div class="message">
             ✨ Something special is waiting for you ✨
@@ -474,28 +462,50 @@
         <div class="sub">
             A little surprise, made with lots of love 💜
         </div>
-<button class="nextBtn" onclick="goNext()">
-    Next ✨
-</button>
-    </div>
 
+        <button class="nextBtn" onclick="goNext()">
+            Next ✨
+        </button>
+
+    </div>
 
     <!-- SPARKLES -->
 
-    <span class="sparkle" style="top:15%; left:20%; animation-delay:0s;"></span>
-    <span class="sparkle" style="top:25%; left:80%; animation-delay:0.5s;"></span>
-    <span class="sparkle" style="top:70%; left:15%; animation-delay:1s;"></span>
-    <span class="sparkle" style="top:80%; left:85%; animation-delay:1.5s;"></span>
-    <span class="sparkle" style="top:45%; left:90%; animation-delay:0.7s;"></span>
-    <span class="sparkle" style="top:55%; left:10%; animation-delay:1.2s;"></span>
+    <span
+        class="sparkle"
+        style="top:15%; left:20%; animation-delay:0s;">
+    </span>
 
+    <span
+        class="sparkle"
+        style="top:25%; left:80%; animation-delay:0.5s;">
+    </span>
+
+    <span
+        class="sparkle"
+        style="top:70%; left:15%; animation-delay:1s;">
+    </span>
+
+    <span
+        class="sparkle"
+        style="top:80%; left:85%; animation-delay:1.5s;">
+    </span>
+
+    <span
+        class="sparkle"
+        style="top:45%; left:90%; animation-delay:0.7s;">
+    </span>
+
+    <span
+        class="sparkle"
+        style="top:55%; left:10%; animation-delay:1.2s;">
+    </span>
 
     <script>
 
-        /* CHANGE YOUR PIN HERE */
+        /* ---------- PIN ---------- */
 
-        const correctPIN = "10OCT";
-
+        const correctPIN = "10_10";
 
         function unlock() {
 
@@ -508,7 +518,6 @@
             const error =
                 document.getElementById("error");
 
-
             if (enteredPIN === correctPIN) {
 
                 /* Hide PIN screen */
@@ -519,31 +528,24 @@
                     pinScreen.style.display = "none";
                 }, 1000);
 
-
                 /* Open cinematic curtains */
 
                 setTimeout(() => {
-
                     document.body.classList.add("open");
-
                 }, 700);
 
-            }
-
-            else {
+            } else {
 
                 error.style.display = "block";
 
                 document.getElementById("pinInput").value = "";
-
             }
-
         }
 
+        /* ---------- ENTER KEY ---------- */
 
-        /* Press Enter to unlock */
-
-        document.getElementById("pinInput")
+        document
+            .getElementById("pinInput")
             .addEventListener("keydown", function(event) {
 
                 if (event.key === "Enter") {
@@ -551,10 +553,15 @@
                 }
 
             });
-function goNext() {
-    window.location.href = "two.html";
-}
+
+        /* ---------- NEXT PAGE ---------- */
+
+        function goNext() {
+            window.location.href = "two.html";
+        }
+
     </script>
 
 </body>
+
 </html>
