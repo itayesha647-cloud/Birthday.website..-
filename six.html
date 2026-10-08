@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday 💜</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    overflow:auto;
+
+    font-family:Georgia,"Times New Roman",serif;
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(255,255,255,.75),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #eee0ff,
+            #d8b4fe,
+            #c084fc,
+            #a855f7,
+            #8b5cf6
+        );
+
+    color:#3b0764;
+}
+
+
+/* MAIN CARD */
+
+.messageCard{
+
+    width:90%;
+    max-width:650px;
+
+    margin:55px auto 35px;
+
+    padding:45px 35px;
+
+    background:rgba(255,255,255,.30);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    border-radius:28px;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+        0 20px 50px rgba(59,7,100,.25),
+        0 0 30px rgba(255,255,255,.4);
+
+    animation:cardAppear 1.5s ease;
+}
+
+
+@keyframes cardAppear{
+
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+
+/* SMALL TITLE */
+
+.smallTitle{
+
+    font-size:18px;
+
+    letter-spacing:4px;
+
+    color:#5b21b6;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+
+    text-shadow:0 0 8px white;
+}
+
+
+/* HEADING */
+
+h1{
+
+    margin:5px 0 15px;
+
+    font-size:43px;
+
+    color:white;
+
+    text-shadow:
+        0 0 8px #6b21a8,
+        0 0 20px #7e22ce,
+        0 0 35px #c084fc;
+
+}
+
+
+/* HEART */
+
+.bigHeart{
+
+    font-size:35px;
+
+    margin:5px 0 20px;
+
+    animation:heartBeat 1.5s infinite;
+}
+
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+
+}
+
+
+/* MESSAGE */
+
+.message{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#4c1d95;
+
+    font-weight:500;
+
+}
+
+
+.message p{
+
+    margin:16px 0;
+
+}
+
+
+/* SIGNATURE */
+
+.signature{
+
+    margin-top:30px;
+
+    font-size:22px;
+
+    font-style:italic;
+
+    font-weight:bold;
+
+    color:#581c87;
+
+}
+
+
+/* LAST W */
+
+.lastW{
+
+    margin-top:35px;
+
+    font-size:11px;
+
+    color:#6b21a8;
+
+    opacity:.7;
+
+}
+
+
+/* SPARKLES */
+
+.sparkle{
+
+    position:fixed;
+
+    color:white;
+
+    font-size:18px;
+
+    opacity:.7;
+
+    animation:sparkleFloat 4s ease-in-out infinite;
+}
+
+
+.s1{
+    left:10%;
+    top:20%;
+}
+
+.s2{
+    right:12%;
+    top:25%;
+    animation-delay:1s;
+}
+
+.s3{
+    left:15%;
+    bottom:20%;
+    animation-delay:2s;
+}
+
+.s4{
+    right:15%;
+    bottom:18%;
+    animation-delay:.5s;
+}
+
+
+@keyframes sparkleFloat{
+
+    0%,100%{
+        transform:translateY(0) scale(1);
+        opacity:.5;
+    }
+
+    50%{
+        transform:translateY(-12px) scale(1.2);
+        opacity:1;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    .messageCard{
+
+        margin:30px auto 25px;
+
+        padding:32px 22px;
+
+        width:92%;
+
+    }
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+    .smallTitle{
+
+        font-size:15px;
+
+    }
+
+    .message{
+
+        font-size:16px;
+
+        line-height:1.75;
+
+    }
+
+    .signature{
+
+        font-size:20px;
+
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- SPARKLES -->
+
+<div class="sparkle s1">✦</div>
+<div class="sparkle s2">✧</div>
+<div class="sparkle s3">✦</div>
+<div class="sparkle s4">✧</div>
+
+
+<!-- MESSAGE -->
+
+<div class="messageCard">
+
+    <div class="smallTitle">
+        A Little Message
+    </div>
+
+
+    <h1>
+        Happy Birthday! 💜
+    </h1>
+
+
+    <div class="bigHeart">
+        💜
+    </div>
+
+
+    <div class="message">
+
+        <p>
+            Today is all about celebrating you
+            and the beautiful person you are. ✨
+        </p>
+
+        <p>
+            May your life always be filled with
+            happiness, peace, love, and countless
+            beautiful moments.
+        </p>
+
+        <p>
+            May Allah bless you with everything
+            your heart wishes for and keep you
+            smiling always. 🤍
+        </p>
+
+        <p>
+            I hope this little surprise brought
+            a beautiful smile to your face. 🥹💜
+        </p>
+
+        <p>
+            Keep shining, keep smiling,
+            and always remember that
+            you are truly special. ✨
+        </p>
+
+        <p>
+            Happy Birthday once again! 🎂💜
+        </p>
+
+    </div>
+
+
+    <div class="signature">
+        With lots of love,<br>
+        Nimra 🤍
+    </div>
+
+
+    <div class="lastW">
+        w
+    </div>
+
+</div>
+
+
+</body>
+</html>

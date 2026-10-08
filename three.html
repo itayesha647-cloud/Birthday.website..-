@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>10 October</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    overflow:hidden;
+
+    font-family:Georgia,"Times New Roman",serif;
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255,255,255,.75),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #eee0ff,
+            #d8b4fe,
+            #c084fc,
+            #a855f7,
+            #8b5cf6
+        );
+
+    color:#3b0764;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/* MAIN CARD */
+
+.container{
+    position:relative;
+
+    width:90%;
+    max-width:650px;
+
+    padding:55px 25px 60px;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.20);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    box-shadow:
+        0 20px 60px rgba(59,7,100,.25),
+        inset 0 0 30px rgba(255,255,255,.20);
+
+    backdrop-filter:blur(10px);
+
+    animation:cardAppear 1.5s ease forwards;
+}
+
+
+@keyframes cardAppear{
+
+    from{
+        opacity:0;
+        transform:
+            scale(.85)
+            translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+/* TOP TEXT */
+
+.smallText{
+
+    font-size:21px;
+
+    letter-spacing:5px;
+
+    font-weight:bold;
+
+    color:#4c1d95;
+
+    text-shadow:
+        0 0 8px white,
+        0 0 18px #eadcff;
+
+    animation:softGlow 2s infinite alternate;
+}
+
+
+@keyframes softGlow{
+
+    from{
+        opacity:.7;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+
+/* DATE */
+
+.date{
+
+    margin-top:28px;
+
+    font-size:76px;
+
+    font-weight:bold;
+
+    color:white;
+
+    letter-spacing:3px;
+
+    text-shadow:
+        0 0 8px #6b21a8,
+        0 0 20px #7e22ce,
+        0 0 40px #c084fc;
+
+    animation:dateGlow 2.5s ease-in-out infinite alternate;
+}
+
+
+@keyframes dateGlow{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.04);
+    }
+}
+
+
+/* MONTH */
+
+.month{
+
+    margin-top:2px;
+
+    font-size:34px;
+
+    letter-spacing:10px;
+
+    font-weight:bold;
+
+    color:#4c1d95;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 0 8px white,
+        0 0 15px #e9d5ff;
+}
+
+
+/* LINE */
+
+.line{
+
+    width:230px;
+
+    height:2px;
+
+    margin:28px auto;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #7e22ce,
+            transparent
+        );
+
+    box-shadow:
+        0 0 12px #e9d5ff;
+}
+
+
+/* MESSAGE */
+
+.message{
+
+    font-size:23px;
+
+    color:#4c1d95;
+
+    font-weight:bold;
+
+    line-height:1.6;
+
+    text-shadow:
+        0 0 7px white;
+}
+
+
+/* HEART */
+
+.heart{
+
+    margin-top:18px;
+
+    font-size:42px;
+
+    color:#7e22ce;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 20px #c084fc;
+
+    animation:heartBeat 1.3s infinite;
+}
+
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+}
+
+
+/* BUTTON */
+
+.clickBtn{
+
+    margin-top:25px;
+
+    padding:14px 40px;
+
+    border:none;
+
+    border-radius:35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #581c87,
+            #7e22ce,
+            #a855f7
+        );
+
+    color:white;
+
+    font-size:18px;
+
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 22px rgba(59,7,100,.35),
+        0 0 15px rgba(255,255,255,.45);
+
+    transition:.3s;
+
+    animation:buttonGlow 2s infinite alternate;
+}
+
+
+.clickBtn:hover{
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+    box-shadow:
+        0 12px 30px rgba(59,7,100,.5),
+        0 0 25px white;
+}
+
+
+@keyframes buttonGlow{
+
+    from{
+        box-shadow:
+            0 8px 22px rgba(59,7,100,.35),
+            0 0 10px rgba(255,255,255,.3);
+    }
+
+    to{
+        box-shadow:
+            0 8px 25px rgba(59,7,100,.45),
+            0 0 22px rgba(255,255,255,.65);
+    }
+}
+
+
+/* SPARKLES */
+
+.sparkle{
+
+    position:fixed;
+
+    color:white;
+
+    pointer-events:none;
+
+    font-size:22px;
+
+    animation:sparkleMove 4s linear infinite;
+
+    opacity:0;
+}
+
+
+.s1{
+    left:10%;
+    top:20%;
+    animation-delay:.5s;
+}
+
+.s2{
+    right:12%;
+    top:25%;
+    animation-delay:1.5s;
+}
+
+.s3{
+    left:18%;
+    bottom:18%;
+    animation-delay:2s;
+}
+
+.s4{
+    right:15%;
+    bottom:20%;
+    animation-delay:3s;
+}
+
+.s5{
+    left:50%;
+    top:8%;
+    animation-delay:1s;
+}
+
+
+@keyframes sparkleMove{
+
+    0%{
+        opacity:0;
+        transform:
+            scale(.4)
+            rotate(0deg);
+    }
+
+    30%{
+        opacity:1;
+    }
+
+    60%{
+        opacity:.8;
+        transform:
+            scale(1.3)
+            rotate(180deg);
+    }
+
+    100%{
+        opacity:0;
+        transform:
+            scale(.4)
+            rotate(360deg);
+    }
+}
+
+
+/* FLOATING LIGHTS */
+
+.light{
+
+    position:fixed;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 20px #e9d5ff;
+
+    animation:floatLight 5s ease-in-out infinite;
+
+    opacity:.7;
+}
+
+
+.l1{
+    left:25%;
+    bottom:-10px;
+}
+
+.l2{
+    left:70%;
+    bottom:-10px;
+    animation-delay:2s;
+}
+
+.l3{
+    left:45%;
+    bottom:-10px;
+    animation-delay:3.5s;
+}
+
+
+@keyframes floatLight{
+
+    0%{
+        transform:
+            translateY(0)
+            scale(.5);
+
+        opacity:0;
+    }
+
+    30%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:
+            translateY(-100vh)
+            scale(1.2);
+
+        opacity:0;
+    }
+}
+
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    .container{
+        padding:40px 18px 45px;
+    }
+
+    .smallText{
+        font-size:16px;
+        letter-spacing:3px;
+    }
+
+    .date{
+        font-size:58px;
+    }
+
+    .month{
+        font-size:27px;
+        letter-spacing:7px;
+    }
+
+    .message{
+        font-size:19px;
+    }
+
+    .clickBtn{
+        padding:13px 34px;
+        font-size:17px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- SPARKLES -->
+
+<div class="sparkle s1">✦</div>
+<div class="sparkle s2">✧</div>
+<div class="sparkle s3">✦</div>
+<div class="sparkle s4">✧</div>
+<div class="sparkle s5">✦</div>
+
+
+<!-- FLOATING LIGHTS -->
+
+<div class="light l1"></div>
+<div class="light l2"></div>
+<div class="light l3"></div>
+
+
+<!-- MAIN CARD -->
+
+<div class="container">
+
+
+    <div class="smallText">
+        A Special Day
+    </div>
+
+
+    <div class="date">
+        10
+    </div>
+
+
+    <div class="month">
+        October
+    </div>
+
+
+    <div class="line"></div>
+
+
+    <div class="message">
+        A beautiful day for<br>
+        a beautiful soul ✨
+    </div>
+
+
+    <div class="heart">
+        ♥
+    </div>
+
+
+    <!-- NEXT BUTTON -->
+
+    <button
+        class="clickBtn"
+        onclick="goNext()"
+    >
+        Click Here ✨
+    </button>
+
+
+</div>
+
+
+<script>
+
+function goNext(){
+
+    window.location.href = "four.html";
+
+}
+
+</script>
+
+
+</body>
+</html>
